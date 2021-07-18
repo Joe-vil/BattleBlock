@@ -736,6 +736,23 @@ class PlayState extends MusicBeatState
 	
 						add(stageCurtains);
 				}
+
+
+
+
+				case 'test':
+				{
+						defaultCamZoom = 0.5;
+						curStage = 'test';
+						var test:FlxSprite = new FlxSprite(-1238.3, -1250.3).loadGraphic(Paths.image('stage/test', 'battleblock'));
+						test.antialiasing = true;
+						test.active = false;
+						add(test);
+				}
+
+
+
+
 			default:
 			{
 					defaultCamZoom = 0.9;
@@ -876,6 +893,21 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+
+
+
+
+				case 'test':
+				boyfriend.x = 1210.25;
+				boyfriend.y = 668.8;
+				gf.x = 562.8;
+				gf.y = 286.15;
+				dad.x = 204.5;
+				dad.y = -613.9;
+
+
+
+
 		}
 
 		if (!PlayStateChangeables.Optimize)
@@ -2283,6 +2315,9 @@ class PlayState extends MusicBeatState
 					case 'senpai-angry':
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
+					case 'hatty':
+						camFollow.y = dad.getMidpoint().y + 300;
+						camFollow.x = dad.getMidpoint().x + 100;
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -3376,7 +3411,7 @@ class PlayState extends MusicBeatState
 					FlxG.stage.window.onFocusIn.add(focusIn);
 
 					var ourSource:String = "assets/videos/daWeirdVid/dontDelete.webm";
-					WebmPlayer.SKIP_STEP_LIMIT = 90;
+					// WebmPlayer.SKIP_STEP_LIMIT = 90;
 					var str1:String = "WEBM SHIT"; 
 					webmHandler = new WebmHandler();
 					webmHandler.source(ourSource);

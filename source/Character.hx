@@ -498,6 +498,31 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+
+
+
+				
+			case 'hatty':
+
+				tex = Paths.getSparrowAtlas('characters/Hatty-phase-1', 'battleblock');
+				frames = tex;
+				animation.addByPrefix('idle', 'Hatty idle', 24);
+				animation.addByPrefix('singUP', 'Hatty up note', 24);
+				animation.addByPrefix('singRIGHT', 'Hatty right note', 24);
+				animation.addByPrefix('singDOWN', 'Hatty down note', 24);
+				animation.addByPrefix('singLEFT', 'Hatty left note', 24);
+
+				addOffset('idle');
+				addOffset("singUP", 126, 0);
+				addOffset("singRIGHT", 41, 1);
+				addOffset("singLEFT", 94, 0);
+				addOffset("singDOWN", 3, -1);
+
+				playAnim('idle');
+
+
+
+
 		}
 
 		dance();
