@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Hatty phase 1.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Hatty down note0000" x="2474" y="1714" width="800" height="1709" frameX="-7" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0001" x="2474" y="1714" width="800" height="1709" frameX="-7" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0002" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0003" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0004" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0005" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0006" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0007" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0008" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0009" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0010" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0011" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0012" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty down note0013" x="1663" y="3411" width="799" height="1709" frameX="0" frameY="0" frameWidth="807" frameHeight="1709"/>
+	<SubTexture name="Hatty idle0000" x="1663" y="1714" width="808" height="1694" frameX="0" frameY="-6" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0001" x="1663" y="1714" width="808" height="1694" frameX="0" frameY="-6" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0002" x="3277" y="1714" width="792" height="1697" frameX="-6" frameY="-3" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0003" x="3277" y="1714" width="792" height="1697" frameX="-6" frameY="-3" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0004" x="790" y="3413" width="783" height="1699" frameX="-9" frameY="-1" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0005" x="3277" y="3414" width="785" height="1699" frameX="-9" frameY="-1" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0006" x="2465" y="3426" width="785" height="1699" frameX="-9" frameY="-1" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0007" x="3253" y="5116" width="784" height="1700" frameX="-9" frameY="0" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0008" x="3" y="3413" width="784" height="1700" frameX="-9" frameY="0" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0009" x="3" y="3413" width="784" height="1700" frameX="-9" frameY="0" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0010" x="3" y="3413" width="784" height="1700" frameX="-9" frameY="0" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0011" x="3" y="3413" width="784" height="1700" frameX="-9" frameY="0" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0012" x="3" y="3413" width="784" height="1700" frameX="-9" frameY="0" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty idle0013" x="3" y="3413" width="784" height="1700" frameX="-9" frameY="0" frameWidth="808" frameHeight="1700"/>
+	<SubTexture name="Hatty left note0000" x="1823" y="3" width="892" height="1708"/>
+	<SubTexture name="Hatty left note0001" x="1823" y="3" width="892" height="1708"/>
+	<SubTexture name="Hatty left note0002" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0003" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0004" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0005" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0006" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0007" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0008" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0009" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0010" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0011" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0012" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty left note0013" x="2718" y="3" width="834" height="1708" frameX="-47" frameY="0" frameWidth="892" frameHeight="1708"/>
+	<SubTexture name="Hatty right note0000" x="3" y="1711" width="838" height="1699"/>
+	<SubTexture name="Hatty right note0001" x="3" y="1711" width="838" height="1699"/>
+	<SubTexture name="Hatty right note0002" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0003" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0004" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0005" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0006" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0007" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0008" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0009" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0010" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0011" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0012" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty right note0013" x="844" y="1711" width="816" height="1699" frameX="-12" frameY="0" frameWidth="838" frameHeight="1699"/>
+	<SubTexture name="Hatty up note0000" x="919" y="3" width="901" height="1705" frameX="-24" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0001" x="919" y="3" width="901" height="1705" frameX="-24" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0002" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0003" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0004" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0005" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0006" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0007" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0008" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0009" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0010" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0011" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0012" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+	<SubTexture name="Hatty up note0013" x="3" y="3" width="913" height="1705" frameX="0" frameY="0" frameWidth="925" frameHeight="1705"/>
+</TextureAtlas>

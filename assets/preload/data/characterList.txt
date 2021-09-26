@@ -1,6 +1,8 @@
 bf
+bf-new
 dad
 gf
+gf-new
 spooky
 pico
 mom
@@ -15,3 +17,5 @@ bf-pixel
 senpai
 senpai-angry
 spirit
+hatty
+hatty-mad

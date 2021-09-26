@@ -125,6 +125,31 @@ class Character extends FlxSprite
 				updateHitbox();
 				antialiasing = false;
 
+			case 'gf-new':
+				// GIRLFRIEND CODE
+				tex = Paths.getSparrowAtlas('characters/gf-remake', 'BattleBlock');
+				frames = tex;
+				animation.addByPrefix('cheer', 'GF up note 2', 24, false);
+				animation.addByPrefix('singLEFT', 'GF left note 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'GF right note 1', 24, false);
+				animation.addByPrefix('singUP', 'GF up note 1', 24, false);
+				animation.addByPrefix('singDOWN', 'GF down note 1', 24, false);
+				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+
+				addOffset('cheer');
+				addOffset('danceLeft', 0, -9);
+				addOffset('danceRight', 0, -9);
+
+				addOffset("singUP", 0, 4);
+				addOffset("singRIGHT", 0, -20);
+				addOffset("singLEFT", 0, -19);
+				addOffset("singDOWN", 0, -20);
+
+				playAnim('danceRight');
+
+
 			case 'dad':
 				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('characters/DADDY_DEAREST');
@@ -309,6 +334,41 @@ class Character extends FlxSprite
 
 				flipX = true;
 				healthBarColor = FlxColor.fromRGB(173, 200, 255);
+
+
+			case 'bf-new':
+				var tex = Paths.getSparrowAtlas('characters/Boyfriend-remake', 'BattleBlock');
+				frames = tex;
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
+
+				addOffset('idle', -5);
+				addOffset("singUP", -29, 27);
+				addOffset("singRIGHT", -38, -7);
+				addOffset("singLEFT", 12, -6);
+				addOffset("singDOWN", -10, -50);
+				addOffset("singUPmiss", -29, 27);
+				addOffset("singRIGHTmiss", -30, 21);
+				addOffset("singLEFTmiss", 12, 24);
+				addOffset("singDOWNmiss", -11, -19);
+				addOffset("hey", 7, 4);
+				addOffset('scared', -4);
+
+				playAnim('idle');
+
+				flipX = true;
+				healthBarColor = FlxColor.fromRGB(173, 200, 255);
+
 
 			case 'bf-christmas':
 				var tex = Paths.getSparrowAtlas('characters/bfChristmas');
@@ -504,6 +564,42 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+
+				case 'hatty':
+				tex = Paths.getSparrowAtlas('characters/Hatty phase 1', 'BattleBlock');
+				frames = tex;
+				animation.addByPrefix('idle', 'Hatty idle', 24);
+				animation.addByPrefix('singUP', 'Hatty up note', 24);
+				animation.addByPrefix('singRIGHT', 'Hatty right note', 24);
+				animation.addByPrefix('singDOWN', 'Hatty down note', 24);
+				animation.addByPrefix('singLEFT', 'Hatty left note', 24);
+
+				addOffset('idle');
+				addOffset("singUP", 126, 0);
+				addOffset("singRIGHT", 41, 1);
+				addOffset("singLEFT", 94, 0);
+				addOffset("singDOWN", 3, -1);
+
+				playAnim('idle');
+				healthBarColor = FlxColor.fromRGB(75, 0, 110);
+
+				case 'hatty-mad':
+				tex = Paths.getSparrowAtlas('characters/Hatty phase 2', 'BattleBlock');
+				frames = tex;
+				animation.addByPrefix('idle', 'Hatty idle', 24);
+				animation.addByPrefix('singUP', 'Hatty up note', 24);
+				animation.addByPrefix('singRIGHT', 'Hatty right note', 24);
+				animation.addByPrefix('singDOWN', 'Hatty down note', 24);
+				animation.addByPrefix('singLEFT', 'Hatty left note', 24);
+
+				addOffset('idle');
+				addOffset("singUP", -6, 50);
+				addOffset("singRIGHT", 0, 27);
+				addOffset("singLEFT", -10, 10);
+				addOffset("singDOWN", 0, -30);
+
+				playAnim('idle');
+				healthBarColor = FlxColor.fromRGB(75, 0, 110);
 		}
 
 		dance();
@@ -605,6 +701,16 @@ class Character extends FlxSprite
 							playAnim('danceLeft');
 					}
 				case 'gf-pixel':
+					if (!animation.curAnim.name.startsWith('hair'))
+					{
+						danced = !danced;
+
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
+					}
+				case 'gf-new':
 					if (!animation.curAnim.name.startsWith('hair'))
 					{
 						danced = !danced;

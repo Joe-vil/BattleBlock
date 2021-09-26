@@ -158,6 +158,7 @@ class PlayState extends MusicBeatState
 	var halloweenBG:FlxSprite;
 	var isHalloween:Bool = false;
 
+
 	var phillyCityLights:FlxTypedGroup<FlxSprite>;
 	var phillyTrain:FlxSprite;
 	var trainSound:FlxSound;
@@ -634,45 +635,42 @@ class PlayState extends MusicBeatState
 					bg.scrollFactor.set(0.8, 0.9);
 					bg.scale.set(6, 6);
 					add(bg);
-
-					/* 
-							var bg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('weeb/evilSchoolBG'));
-							bg.scale.set(6, 6);
-							// bg.setGraphicSize(Std.int(bg.width * 6));
-							// bg.updateHitbox();
-							add(bg);
-							var fg:FlxSprite = new FlxSprite(posX, posY).loadGraphic(Paths.image('weeb/evilSchoolFG'));
-							fg.scale.set(6, 6);
-							// fg.setGraphicSize(Std.int(fg.width * 6));
-							// fg.updateHitbox();
-							add(fg);
-							wiggleShit.effectType = WiggleEffectType.DREAMY;
-							wiggleShit.waveAmplitude = 0.01;
-							wiggleShit.waveFrequency = 60;
-							wiggleShit.waveSpeed = 0.8;
-						*/
-
-					// bg.shader = wiggleShit.shader;
-					// fg.shader = wiggleShit.shader;
-
-					/* 
-								var waveSprite = new FlxEffectSprite(bg, [waveEffectBG]);
-								var waveSpriteFG = new FlxEffectSprite(fg, [waveEffectFG]);
-								// Using scale since setGraphicSize() doesnt work???
-								waveSprite.scale.set(6, 6);
-								waveSpriteFG.scale.set(6, 6);
-								waveSprite.setPosition(posX, posY);
-								waveSpriteFG.setPosition(posX, posY);
-								waveSprite.scrollFactor.set(0.7, 0.8);
-								waveSpriteFG.scrollFactor.set(0.9, 0.8);
-								// waveSprite.setGraphicSize(Std.int(waveSprite.width * 6));
-								// waveSprite.updateHitbox();
-								// waveSpriteFG.setGraphicSize(Std.int(fg.width * 6));
-								// waveSpriteFG.updateHitbox();
-								add(waveSprite);
-								add(waveSpriteFG);
-						*/
 			}
+			case 'bbt-stage':
+				{
+						defaultCamZoom = 0.5;
+						curStage = 'bbt-stage';
+						var wall:FlxSprite = new FlxSprite(-650.6, -236.5).loadGraphic(Paths.image('stage/wal', 'BattleBlock'));
+						wall.antialiasing = true;
+						wall.scrollFactor.set(0.9, 0.9);
+						wall.active = false;
+	
+						var bottomfloor:FlxSprite = new FlxSprite(-665.9, 2068.85).loadGraphic(Paths.image('stage/catfloor', 'BattleBlock'));
+						bottomfloor.updateHitbox();
+						bottomfloor.antialiasing = true;
+						bottomfloor.active = false;
+	
+						var rail:FlxSprite = new FlxSprite(362.95, 1540.9).loadGraphic(Paths.image('stage/fence', 'BattleBlock'));
+						rail.updateHitbox();
+						rail.antialiasing = true;
+						rail.active = false;
+
+						var upperstage:FlxSprite = new FlxSprite(-438.3, 1724.15).loadGraphic(Paths.image('stage/stage', 'BattleBlock'));
+						upperstage.updateHitbox();
+						upperstage.antialiasing = true;
+						upperstage.active = false;
+
+						var rafter:FlxSprite = new FlxSprite(282.95, 824.6).loadGraphic(Paths.image('stage/rafter', 'BattleBlock'));
+						rafter.updateHitbox();
+						rafter.antialiasing = true;
+						rafter.active = false;
+	
+						add(wall);
+						add(bottomfloor);
+						add(rail);
+						add(upperstage);
+						add(rafter);
+				}
 			case 'stage':
 				{
 						defaultCamZoom = 0.9;
@@ -738,6 +736,8 @@ class PlayState extends MusicBeatState
 				gfVersion = 'gf-christmas';
 			case 'gf-pixel':
 				gfVersion = 'gf-pixel';
+			case 'gf-new':
+				gfVersion = 'gf-new';
 			default:
 				gfVersion = 'gf';
 		}
@@ -815,19 +815,21 @@ class PlayState extends MusicBeatState
 				gf.y += 300;
 			case 'schoolEvil':
 				if(FlxG.save.data.distractions){
-				// trailArea.scrollFactor.set();
 				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
-				// evilTrail.changeValuesEnabled(false, false, false, false);
-				// evilTrail.changeGraphic()
 				add(evilTrail);
-				// evilTrail.scrollFactor.set(1.1, 1.1);
 				}
-
-
 				boyfriend.x += 200;
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+			case 'bbt-stage':
+				boyfriend.x = 2348.7;
+				boyfriend.y = 1535.6;
+				gf.x = 1507.85;
+				gf.y = 1157.2;
+				gf.scrollFactor.set(1, 1);
+				dad.x = 774.2;
+				dad.y = 195.05;
 		}
 
 		add(gf);
@@ -967,6 +969,16 @@ class PlayState extends MusicBeatState
 		iconP1 = new HealthIcon(SONG.player1, true);
 		iconP1.y = healthBar.y - (iconP1.height / 2);
 		add(iconP1);
+
+		if(curStage == 'bbt-stage')
+			{	
+				var curtains:FlxSprite = new FlxSprite(-621.75, -266.3).loadGraphic(Paths.image('stage/curtains', 'BattleBlock'));
+				curtains.updateHitbox();
+				curtains.antialiasing = true;
+				curtains.scrollFactor.set(0.9, 0.9);
+				curtains.active = false;
+				add(curtains);
+			}
 
 		iconP2 = new HealthIcon(SONG.player2, false);
 		iconP2.y = healthBar.y - (iconP2.height / 2);
@@ -2063,6 +2075,9 @@ class PlayState extends MusicBeatState
 					case 'senpai-angry':
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
+					case 'hatty':
+						camFollow.y = dad.getMidpoint().y + 300;
+						camFollow.x = dad.getMidpoint().x + 100;
 				}
 
 				if (dad.curCharacter == 'mom')
