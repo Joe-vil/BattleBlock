@@ -593,10 +593,10 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFT', 'Hatty left note', 24);
 
 				addOffset('idle');
-				addOffset("singUP", -6, 50);
-				addOffset("singRIGHT", 0, 27);
-				addOffset("singLEFT", -10, 10);
-				addOffset("singDOWN", 0, -30);
+				addOffset("singUP", 264, 233);
+				addOffset("singRIGHT", -7, -39);
+				addOffset("singLEFT", 675, -155);
+				addOffset("singDOWN", 206, -94);
 
 				playAnim('idle');
 				healthBarColor = FlxColor.fromRGB(75, 0, 110);

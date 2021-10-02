@@ -170,7 +170,18 @@ class PlayState extends MusicBeatState
 	var upperBoppers:FlxSprite;
 	var bottomBoppers:FlxSprite;
 	var santa:FlxSprite;
-	
+
+
+
+	var curtains:FlxSprite;
+	var cATS:FlxSprite;
+	var hUE:FlxSprite;
+
+	private var lightOrder:Int = 0;
+	private var lightOrder2:Int = 0;
+
+
+
 	var fc:Bool = true;
 
 
@@ -664,7 +675,34 @@ class PlayState extends MusicBeatState
 						rafter.updateHitbox();
 						rafter.antialiasing = true;
 						rafter.active = false;
-	
+
+						curtains = new FlxSprite(-621.75, -266.3).loadGraphic(Paths.image('stage/curtains', 'BattleBlock'));
+						curtains.updateHitbox();
+						curtains.antialiasing = true;
+						curtains.scrollFactor.set(0.9, 0.9);
+						curtains.active = false;
+
+						cATS = new FlxSprite(232.4, 1703);
+						cATS.frames = Paths.getSparrowAtlas('stage/catts','BattleBlock');
+						cATS.animation.addByPrefix('bop', 'Stage cats', 24, true);
+						cATS.animation.play('bop');
+						cATS.scrollFactor.set(0.9, 0.9);
+
+						hUE = new FlxSprite(-853, -403).loadGraphic(Paths.image('stage/hue-black', 'BattleBlock'));
+						hUE.updateHitbox();
+						hUE.antialiasing = true;
+						hUE.active = false;
+
+						phillyCityLights = new FlxTypedGroup<FlxSprite>();
+						for (i in 1...4)
+						{
+						var light:FlxSprite = new FlxSprite(331.95, 749.25).loadGraphic(Paths.image('stage/spotlight' + i, 'BattleBlock'));
+						light.visible = false;
+						light.updateHitbox();
+						light.antialiasing = true;
+						phillyCityLights.add(light);
+						}
+					
 						add(wall);
 						add(bottomfloor);
 						add(rail);
@@ -828,7 +866,7 @@ class PlayState extends MusicBeatState
 				gf.x = 1507.85;
 				gf.y = 1157.2;
 				gf.scrollFactor.set(1, 1);
-				dad.x = 774.2;
+				dad.x = 917.75;
 				dad.y = 195.05;
 		}
 
@@ -970,19 +1008,17 @@ class PlayState extends MusicBeatState
 		iconP1.y = healthBar.y - (iconP1.height / 2);
 		add(iconP1);
 
-		if(curStage == 'bbt-stage')
-			{	
-				var curtains:FlxSprite = new FlxSprite(-621.75, -266.3).loadGraphic(Paths.image('stage/curtains', 'BattleBlock'));
-				curtains.updateHitbox();
-				curtains.antialiasing = true;
-				curtains.scrollFactor.set(0.9, 0.9);
-				curtains.active = false;
-				add(curtains);
-			}
-
 		iconP2 = new HealthIcon(SONG.player2, false);
 		iconP2.y = healthBar.y - (iconP2.height / 2);
 		add(iconP2);
+
+		if(curStage == 'bbt-stage')
+			{	
+				add(phillyCityLights);
+				add(curtains);
+				add(cATS);
+				add(hUE);
+			}
 
 		strumLineNotes.cameras = [camHUD];
 		notes.cameras = [camHUD];
@@ -3472,6 +3508,7 @@ class PlayState extends MusicBeatState
 			iconP2.scale.x = 1;
 			iconP2.scale.y = 1;
 			camHUD.zoom = 1;
+			FlxG.camera.zoom += 0.015;
 			FlxTween.tween(camHUD, {zoom: 1.035 + bopmult}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 			FlxTween.tween(iconP1.scale, {x: 1.15, y: 1.15}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
 			FlxTween.tween(iconP2.scale, {x: 1.15, y: 1.15}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});
@@ -3554,6 +3591,24 @@ class PlayState extends MusicBeatState
 						trainCooldown = FlxG.random.int(-4, 0);
 						trainStart();
 					}
+				}
+
+				case "bbt-stage":
+				if (curBeat % 4 == 0)
+				{
+
+					phillyCityLights.forEach(function(light:FlxSprite)
+					{
+						light.visible = false;
+					});
+
+					curLight = lightOrder;
+
+					phillyCityLights.members[curLight].visible = true;
+					lightOrder++;
+					if (lightOrder > 2)
+						lightOrder = 0;
+					
 				}
 		}
 
