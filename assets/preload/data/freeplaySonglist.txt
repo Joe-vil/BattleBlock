@@ -1,4 +1,0 @@
-Tutorial:gf:1
-Bopeebo:dad:1
-strings:hatty:1
-anarchy:hatty:1

@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				94,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Hatty left note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Hatty idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				126,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Hatty up note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				3,
+				-1
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Hatty down note",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				41,
+				1
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Hatty right note",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Hatty",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "icon-hatty",
+	"flip_x": false,
+	"healthbar_colors": [
+		155,
+		2,
+		235
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

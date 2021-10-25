@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "kid idle"
+		},
+		{
+			"offsets": [
+				-15,
+				-49
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singDOWN",
+			"loop": true,
+			"name": "kid down note"
+		},
+		{
+			"offsets": [
+				52,
+				-1
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": true,
+			"name": "kid left note"
+		},
+		{
+			"offsets": [
+				-27,
+				-15
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": true,
+			"name": "kid right note"
+		},
+		{
+			"offsets": [
+				35,
+				37
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singUP",
+			"loop": true,
+			"name": "kid up note"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/small-man",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "DadNme-kid",
+	"flip_x": false,
+	"healthbar_colors": [
+		180,
+		0,
+		255
+	],
+	"camera_position": [
+		10,
+		140
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

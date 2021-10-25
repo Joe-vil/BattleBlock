@@ -1,0 +1,39 @@
+{
+	"storyName": "bbt",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"songs": [
+		[
+			"strings",
+			"hatty",
+			[
+				135,
+				0,
+				155
+			]
+		],
+		[
+			"anarchy",
+			"hatty-mad",
+			[
+				135,
+				0,
+				155
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"hatty",
+		"bf",
+		"gf"
+	],
+	"weekName": "lmao"
+}

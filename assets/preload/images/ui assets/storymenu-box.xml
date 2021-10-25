@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="storymenu-box.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="story mode box0000" x="3" y="261" width="261" height="214"/>
+	<SubTexture name="story mode box gold0000" x="3" y="3" width="304" height="255"/>
+</TextureAtlas>
