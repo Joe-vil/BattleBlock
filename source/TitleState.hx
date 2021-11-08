@@ -125,7 +125,7 @@ class TitleState extends MusicBeatState
 	var titleText:FlxSprite;
 	var swagShader:ColorSwap = null;
 
-	var dadsaw:FlxSprite;
+	var intro:FlxSprite;
 
 	function startIntro()
 	{
@@ -136,7 +136,7 @@ class TitleState extends MusicBeatState
 			// https://github.com/HaxeFlixel/flixel-addons/pull/348
 
 			if(FlxG.sound.music == null) {
-				FlxG.sound.playMusic(Paths.music('The_Menu_Thing'), 0);
+				FlxG.sound.playMusic(Paths.music('funkMenu_test01'), 0);
 
 				FlxG.sound.music.fadeIn(4, 0, 0.7);
 			}
@@ -145,12 +145,14 @@ class TitleState extends MusicBeatState
 		Conductor.changeBPM(102);
 		persistentUpdate = true;
 
-		dadsaw = new FlxSprite(0).loadGraphic(Paths.image('ui assets/purp'));
-		dadsaw.antialiasing = ClientPrefs.globalAntialiasing;	
-		dadsaw.updateHitbox();
-		dadsaw.screenCenter();
-		dadsaw.visible = true;	
-		add(dadsaw);
+		intro = new FlxSprite(0, 0);
+		intro.frames = Paths.getSparrowAtlas('ui assets/menu animation');
+		intro.animation.addByPrefix('idle', 'MENU', 24, true);
+		intro.animation.play('idle');
+		// intro.scale.y = 2;
+		// intro.scale.x = 2;
+		intro.screenCenter;
+		intro.antialiasing = true;
 
 		logoBl = new FlxSprite(140 , -100);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
@@ -185,8 +187,7 @@ class TitleState extends MusicBeatState
 		titleText.updateHitbox();
 
 
-		add(dadsaw);
-		add(logoBl);
+		add(intro);
 		add(titleText);
 
 

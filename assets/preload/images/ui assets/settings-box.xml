@@ -3,5 +3,5 @@
 	<!-- Created with Adobe Animate version 19.0.0.326 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="options box0000" x="3" y="263" width="271" height="215"/>
-	<SubTexture name="options box gold0000" x="3" y="3" width="315" height="257"/>
+	<SubTexture name="box gold0000" x="3" y="3" width="315" height="257"/>
 </TextureAtlas>

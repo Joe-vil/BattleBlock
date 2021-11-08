@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="storybutt.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Baaaaaaaa0000" x="265" y="3" width="233" height="247"/>
+	<SubTexture name="aaaaaaaaa20000" x="3" y="3" width="259" height="274"/>
+</TextureAtlas>

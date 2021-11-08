@@ -305,7 +305,7 @@ class PlayState extends MusicBeatState
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
 		if (isStoryMode)
 		{
-			detailsText = "Story Mode: " + WeekData.getCurrentWeek().weekName;
+			detailsText = "Story Mode: Scene 1";
 		}
 		else
 		{
@@ -410,7 +410,7 @@ class PlayState extends MusicBeatState
 						rafter.antialiasing = true;
 						rafter.active = false;
 
-						curtains = new BGSprite('stage/curtains', -621.75, -266.3);
+						curtains = new BGSprite('bbt/curtains', -621.75, -266.3);
 						curtains.updateHitbox();
 						curtains.antialiasing = true;
 						curtains.scrollFactor.set(0.9, 0.9);
@@ -563,6 +563,7 @@ class PlayState extends MusicBeatState
 				gf.scrollFactor.set(1, 1);
 				dad.x = 917.75;
 				dad.y = 195.05;
+				add(curtains);
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
@@ -2714,14 +2715,15 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					FlxG.sound.playMusic(Paths.music(''));
 
 					cancelFadeTween();
 					CustomFadeTransition.nextCamera = camOther;
 					if(FlxTransitionableState.skipNextTransIn) {
 						CustomFadeTransition.nextCamera = null;
 					}
-					MusicBeatState.switchState(new StoryMenuState());
+
+					MusicBeatState.switchState(new Ending());
 
 					// if ()
 					if(!usedPractice) {
