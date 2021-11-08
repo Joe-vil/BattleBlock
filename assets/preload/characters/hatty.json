@@ -1,59 +1,59 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				94,
-				0
+				-1
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Hatty left note",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Hatty left note"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "Hatty idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Hatty idle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				126,
 				0
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Hatty up note",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Hatty up note"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				3,
 				-1
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Hatty down note",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Hatty down note"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				41,
 				1
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Hatty right note",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Hatty right note"
 		}
 	],
 	"no_antialiasing": false,
@@ -70,8 +70,8 @@
 		235
 	],
 	"camera_position": [
-		0,
-		0
+		-80,
+		380
 	],
 	"sing_duration": 6.1,
 	"scale": 1

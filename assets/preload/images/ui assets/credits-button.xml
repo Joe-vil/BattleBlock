@@ -2,6 +2,6 @@
 <TextureAtlas imagePath="credits-button.png">
 	<!-- Created with Adobe Animate version 19.0.0.326 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="credits icon0000" x="3" y="132" width="142" height="87"/>
-	<SubTexture name="credits icon gold0000" x="3" y="3" width="187" height="126"/>
+	<SubTexture name="credits icon0000" x="3" y="93" width="142" height="87"/>
+	<SubTexture name="gold credits icon0000" x="3" y="3" width="142" height="87"/>
 </TextureAtlas>

@@ -323,8 +323,10 @@ class PlayState extends MusicBeatState
 		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
 			switch (songName)
 			{
-				case 'strings' | 'anarchy':
+				case 'strings':
 					curStage = 'bbt-stage';
+				case 'anarchy':
+					curStage = 'bbt-stage2';
 				default:
 					curStage = 'stage';
 			}
@@ -384,7 +386,7 @@ class PlayState extends MusicBeatState
 					add(stageCurtains);
 				}
 
-			case 'bbt-stage':
+			case 'bbt-stage'|'bbt-stage2':
 				{
 						var wall:BGSprite = new BGSprite('bbt/wal', -650.6, -236.5, 0.9, 0.9);
 						wall.antialiasing = true;
@@ -563,6 +565,15 @@ class PlayState extends MusicBeatState
 				gf.scrollFactor.set(1, 1);
 				dad.x = 917.75;
 				dad.y = 195.05;
+				add(curtains);
+			case 'bbt-stage2':
+				boyfriend.x = 2348.7;
+				boyfriend.y = 1535.6;
+				gf.x = 1507.85;
+				gf.y = 1157.2;
+				gf.scrollFactor.set(1, 1);
+				dad.x = 920.55;
+				dad.y = 1246.95;
 				add(curtains);
 		}
 
@@ -2715,7 +2726,7 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-					FlxG.sound.playMusic(Paths.music(''));
+					FlxG.sound.playMusic(Paths.music('funkMenu_test01'));
 
 					cancelFadeTween();
 					CustomFadeTransition.nextCamera = camOther;

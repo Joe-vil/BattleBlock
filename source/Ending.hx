@@ -29,6 +29,7 @@ class Ending extends MusicBeatState
 
 	override public function create()
 	{
+		FlxG.sound.music.fadeOut(0.01);
         startVideo('hatty');
         new FlxTimer().start(32, gobackyafool);
 		super.create();
@@ -36,7 +37,7 @@ class Ending extends MusicBeatState
 
     function gobackyafool(timer:FlxTimer):Void
         {
-            FlxG.sound.playMusic(Paths.music('funkMenu_test01'), 0);
+            FlxG.sound.music.fadeIn(1, 0, 0.7);
             MusicBeatState.switchState(new MainMenuState());
         }
 

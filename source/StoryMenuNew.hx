@@ -93,16 +93,19 @@ class StoryMenuNew extends MusicBeatState
 			});
 	}
 
+	var ifclicked:Bool;
+
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
 
 		//story button
-		if (FlxG.mouse.overlaps(story))
+		if (!ifclicked && FlxG.mouse.overlaps(story))
 		{
 			story.animation.play('enter');
 			if (FlxG.mouse.justPressed)
 			{
+				ifclicked = true;
 				FlxG.sound.play(Paths.sound('confirmMenu'));
 				enterfreeplay();
 			}
