@@ -245,6 +245,14 @@ class MainMenuState extends MusicBeatState
 				credds.animation.play('idle');
 			}
 
+		if (FlxG.mouse.overlaps(bird))
+			{
+				if (FlxG.mouse.justPressed)
+				{
+					FlxG.sound.play(Paths.sound('voicee'));
+				}
+			}
+
 			if (controls.BACK)
 			{
 				FlxG.sound.play(Paths.sound('cancelMenu'));
